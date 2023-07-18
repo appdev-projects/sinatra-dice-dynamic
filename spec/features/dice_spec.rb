@@ -84,3 +84,21 @@ describe "/dice/5/4" do
       "Expected page to display 'You rolled a U, V, W, X, and Y for a total of Z.' where U, V, W, X, and Y are the dice and Z is the sum."
   end
 end
+
+describe "/dice/50/6" do
+  it "has a level one heading with the text '50d6'", points: 1 do
+    visit "/dice/50/6"
+
+    expect(page).to have_tag("h1", text: /50d6/i)
+  end
+end
+
+describe "/dice/50/6" do
+  it "displays the outcome of rolling fifty six-sided dice in in <li>'s of an unordered list", points: 1 do
+    visit "/dice/50/6"
+
+    expect(page).to have_tag("ul") do
+      with_tag("li", :text => /\d+/, :count => 50)
+    end
+  end
+end
