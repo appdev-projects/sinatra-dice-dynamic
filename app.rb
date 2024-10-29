@@ -5,6 +5,15 @@ get("/") do
   erb(:homepage)
 end
 
+get("/dice/[RANDOM_DICE]/[RANDOM_SIDES]") do
+    
+  "Hello World"
+
+  random_dice = rand(2..100)
+  random_sides = rand(2..100)
+  
+end
+
 get("/dice/2/6") do
   @rolls = []
 
@@ -76,5 +85,3 @@ end
 
     erb(:flexible)
   end
-
-  

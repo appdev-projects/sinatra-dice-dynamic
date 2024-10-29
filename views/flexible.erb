@@ -17,3 +17,16 @@
     </li>
   <% end %>
 </ul>
+
+<%= params.fetch("number_of_dice") %>
+
+<h1>50d6</h1>
+
+<ul>
+  <% @rolls.each do |a_roll| %>
+    <li>
+      <%= a_roll %>
+    </li>
+  <% end %>
+</ul>
+
