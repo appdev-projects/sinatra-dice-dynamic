@@ -4,7 +4,6 @@
   <title>Sinatra Dice Roll</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <style>
     .navbar {
       display: flex;
@@ -23,12 +22,10 @@
     <div><a href="/dice/[RANDOM_DICE]/[RANDOM_SIDES]">Random Dice</a></div>
   </div>
 
-  <%= yield %>
-
-  <!-- Updated inline style with proper syntax -->
   <h1 style="text-align: center; font-family: Helvetica, Arial; font-size: 22px; color: #888; margin: 20px;">
-    <!-- Heading content updated dynamically by Sinatra -->
     <%= @heading_text %>
   </h1>
+
+  <%= yield %>
 </body>
 </html>
